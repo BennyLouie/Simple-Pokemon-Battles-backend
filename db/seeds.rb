@@ -1,5 +1,3 @@
-
-
 User.destroy_all
 Pokemon.destroy_all
 Capture.destroy_all
