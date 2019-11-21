@@ -17,7 +17,7 @@ end
 benben = User.create( first_name: "Benny", last_name: "Louie", username: "benben", password: "benben", wins: 0, losses: 0 )
 dandan = User.create( first_name: "Dan", last_name: "Romano", username: "dandan", password: "dandan", wins: 0, losses: 0 )
 phantom = User.create( first_name: "Kelvin", last_name: "Louie", username: "phantom", password: "phantom", wins: 0, losses: 0 )
-other = User.create( first_name: "Kenneth", last_name: "Louie", username: "other", password: "other", wins: 0, losses: 0 )
+another = User.create( first_name: "Kenneth", last_name: "Louie", username: "another", password: "another", wins: 0, losses: 0 )
 
 User.all.each do |user|
     num = rand(6) + 1

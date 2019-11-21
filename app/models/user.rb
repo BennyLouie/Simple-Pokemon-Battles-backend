@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     has_many :captures, dependent: :destroy
     has_many :pokemons, through: :captures
+    has_secure_password
 
     validates_presence_of :username
     validates_uniqueness_of :username, :case_sensitive => false
