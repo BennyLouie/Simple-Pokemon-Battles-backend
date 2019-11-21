@@ -7,12 +7,6 @@ class User < ApplicationRecord
     validates_uniqueness_of :username, :case_sensitive => false
 
     validates :pokemons, length: { minimum: 0, maximum: 6 }
-    validates :password,
-        presence: { on: :create },
-        length: { minimum: 6, allow_blank: true }
-    validates :password,
-        presence: { on: :update },
-        length: { minimum: 6, allow_blank: true }
     
     def password=(new_password)
         salt = BCrypt::Engine::generate_salt
