@@ -10,7 +10,7 @@ pokemonArr = ["Bulbasaur", "Ivysaur", "Venasaur", "Charmander", "Charmeleon", "C
 
 i = 1
 while i <= 151 do 
-    Pokemon.create( name: pokemonArr[i - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{i}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{i}.png", lv: 1, exp: 0, hp: rand(5) + 1, atk: rand(5) + 1, def: rand(5) + 1, spd: rand(5) + 1, stat_pts: 0 )
+    Pokemon.create( name: pokemonArr[i - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{i}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{i}.png", lv: 1, exp: 0, hp: rand(5) + 5, atk: rand(5) + 1, def: rand(5) + 1, spd: rand(5) + 1, stat_pts: 0 )
     i += 1
 end
 
