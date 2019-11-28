@@ -14,6 +14,24 @@ while i <= 151 do
     i += 1
 end
 
+a = 1
+while a <= 151 do
+    Pokemon.create( name: pokemonArr[a - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{a}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{a}.png", lv: 5, exp: 0, hp: rand(5) + 5, atk: rand(5) + 5, def: rand(5) + 5, spd: rand(5) + 5, stat_pts: 0 )
+    a += 1
+end
+
+b = 1
+while b <= 151 do
+    Pokemon.create( name: pokemonArr[b - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{b}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{b}.png", lv: 10, exp: 0, hp: rand(5) + 7, atk: rand(5) + 7, def: rand(5) + 7, spd: rand(5) + 7, stat_pts: 0 )
+    b += 1
+end
+
+c =1
+while c <= 151 do
+    Pokemon.create( name: pokemonArr[c - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{c}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{c}.png", lv: 15, exp: 0, hp: rand(5) + 10, atk: rand(5) + 10, def: rand(5) + 10, spd: rand(5) + 10, stat_pts: 0 )
+    c += 1
+end
+
 benben = User.create( first_name: "Benny", last_name: "Louie", username: "benben", password: "benben", wins: 0, losses: 0 )
 dandan = User.create( first_name: "Dan", last_name: "Romano", username: "dandan", password: "dandan", wins: 0, losses: 0 )
 phantom = User.create( first_name: "Kelvin", last_name: "Louie", username: "phantom", password: "phantom", wins: 0, losses: 0 )
