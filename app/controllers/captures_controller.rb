@@ -22,7 +22,9 @@ class CapturesController < ApplicationController
     end
 
     def destroy
+        byebug
         set_capture.destroy
+        set_capture.pokemon.destroy
         render json: set_capture
     end
 
