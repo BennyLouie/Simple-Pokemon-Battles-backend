@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_11_21_174404) do
     t.string "back_img"
     t.integer "lv"
     t.integer "exp"
+    t.integer "exp_max"
     t.integer "hp"
     t.integer "atk"
     t.integer "def"
