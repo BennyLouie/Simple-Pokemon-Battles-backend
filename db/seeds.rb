@@ -14,6 +14,12 @@ while i <= 151 do
     i += 1
 end
 
+j = 1
+while j <= 151 do 
+    Pokemon.create( name: pokemonArr[j - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{j}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{j}.png", lv: 1, exp: 0, hp: rand(5) + 5, atk: rand(5) + 1, def: rand(5) + 1, spd: rand(5) + 1, stat_pts: 0 )
+    j += 1
+end
+
 a = 1
 while a <= 151 do
     Pokemon.create( name: pokemonArr[a - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{a}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{a}.png", lv: 5, exp: 0, hp: rand(5) + 5, atk: rand(5) + 5, def: rand(5) + 5, spd: rand(5) + 5, stat_pts: 0 )
@@ -40,7 +46,7 @@ another = User.create( first_name: "Kenneth", last_name: "Louie", username: "ano
 User.all.each do |user|
     num = rand(6) + 1
     num.times do |n|
-        Capture.create(pokemon_id: rand(151) + 1, user: user)
+        Capture.create(pokemon_id: 151 + rand(151) + 1, user: user)
     end
 end
 

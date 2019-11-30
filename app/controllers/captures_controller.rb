@@ -22,10 +22,12 @@ class CapturesController < ApplicationController
     end
 
     def destroy
-        byebug
-        set_capture.destroy
-        set_capture.pokemon.destroy
-        render json: set_capture
+        # byebug
+        pokemonID = set_capture.pokemon_id
+        pokemon = Pokemon.find_by(id: set_capture.pokemon_id)
+        Pokemon.find_by(id: set_capture.pokemon_id).destroy
+        # byebug
+        render json: pokemon
     end
 
     private
