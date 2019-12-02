@@ -19,6 +19,7 @@ class PokemonsController < ApplicationController
     end
 
     def update
+        # byebug
         set_pokemon.update(pokemon_params)
         if set_pokemon.valid?
             render json: set_pokemon
@@ -40,6 +41,6 @@ class PokemonsController < ApplicationController
     end
 
     def pokemon_params
-        params.permit(:name, :front_img, :back_img, :lv, :exp, :hp, :atk, :def, :spd, :stat_pts)
+        params.permit(:name, :front_img, :back_img, :lv, :exp, :exp_max, :hp, :atk, :def, :spd, :stat_pts)
     end
 end

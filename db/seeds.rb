@@ -34,7 +34,7 @@ end
 
 c =1
 while c <= 151 do
-    Pokemon.create( name: pokemonArr[c - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{c}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{c}.png", lv: 15, exp: 0, exp_max: 100, hp: rand(5) + 10, atk: rand(5) + 10, def: rand(5) + 10, spd: rand(5) + 10, stat_pts: 0 )
+    Pokemon.create( name: pokemonArr[c - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{c}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{c}.png", lv: 15, exp: 0, exp_max: 80, hp: rand(5) + 10, atk: rand(5) + 10, def: rand(5) + 10, spd: rand(5) + 10, stat_pts: 0 )
     c += 1
 end
 
