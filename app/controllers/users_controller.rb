@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     end
 
     def update
+        # byebug
         set_user.update(user_params)
         if set_user.valid?
             render json: set_user
@@ -31,11 +32,11 @@ class UsersController < ApplicationController
 
     private
 
-    def set_user
-        User.find_by(id: params[:id])
+    def user_params
+        params.permit(:id, :user, :first_name, :last_name, :username, :password, :wins, :losses)
     end
 
-    def user_params
-        params.permit(:first_name, :last_name, :username, :password, :wins, :losses)
+    def set_user
+        User.find_by(id: params[:id])
     end
 end
