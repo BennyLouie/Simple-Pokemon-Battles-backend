@@ -1,24 +1,27 @@
-# README
+# This repository works as the backend for the following React Project:
+https://github.com/BennyLouie/simple-pokemon-battles
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## You may want to fork and clone from that repository beforehand.
 
-Things you may want to cover:
+## To start off...
+    -Fork and clone from this repository
+    -Bundle install the gems from the Gemfile
+    -Run rails db:seed to pre-load some seed data
+    -Run rails s to start up the server (defaults at Port 3000)
 
-* Ruby version
+### A Brief Summary
 
-* System dependencies
+This repository works as a backend for the React app linked above.
 
-* Configuration
+Stored in this repository is the user information, Pokemon data, and a database of the join models that connects a user to a Pokemon.
 
-* Database creation
+# Routes:
 
-* Database initialization
+/users
+/users/#{number}
 
-* How to run the test suite
+/pokemons
+/pokemons/#{number}
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+/captures
+/captures/#{number}
