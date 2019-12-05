@@ -14,6 +14,9 @@ class UsersController < ApplicationController
         if user.valid?
             user.save
             render json: user
+        elsif params[:password] == ""
+            errors_msgs = user.errors.full_messages.push("Password can't be blank")
+            render json: { errors: errors_msgs }, status: :unprocessable_entity
         else
             render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end
@@ -30,13 +33,13 @@ class UsersController < ApplicationController
 
     def destroy
         set_user.destroy
-        render json: "Your account has been deleted"
+        render json: ["Your account has been deleted"]
     end
 
     private
 
     def user_params
-        params.permit(:id, :user, :first_name, :last_name, :current_password, :username, :password, :wins, :losses)
+        params.permit(:id, :user, :first_name, :last_name, :username, :password, :wins, :losses)
     end
 
     def set_user

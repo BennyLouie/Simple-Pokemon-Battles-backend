@@ -16,7 +16,7 @@ class CapturesController < ApplicationController
             render json: capture
         else
             capture.destroy
-            render json: { errors: "Your team is full. Release a pokemon to add a new one." }, status: :unprocessable_entity
+            render json: { errors: ["Your team is full. Release a pokemon to add a new one."] }, status: :unprocessable_entity
         end
     end
 

@@ -3,6 +3,8 @@ class User < ApplicationRecord
     has_many :pokemons, through: :captures
     has_secure_password
 
+    validates_presence_of :password_digest
+    validates_presence_of :first_name
     validates_presence_of :username
     validates_uniqueness_of :username, :case_sensitive => false
 
