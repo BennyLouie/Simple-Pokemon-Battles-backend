@@ -6,7 +6,6 @@ class UsersController < ApplicationController
     end
 
     def show
-        # byebug
         render json: set_user
     end
 
@@ -21,7 +20,6 @@ class UsersController < ApplicationController
     end
 
     def update
-        # byebug
         set_user.update(user_params)
         if set_user.valid?
             render json: set_user

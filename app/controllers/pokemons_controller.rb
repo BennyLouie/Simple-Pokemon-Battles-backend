@@ -19,7 +19,6 @@ class PokemonsController < ApplicationController
     end
 
     def update
-        # byebug
         set_pokemon.update(pokemon_params)
         if set_pokemon.valid?
             render json: set_pokemon

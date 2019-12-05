@@ -11,7 +11,6 @@ class CapturesController < ApplicationController
 
     def create
         capture = Capture.create(capture_params)
-        # byebug
         user = User.find(capture_params[:user_id])
         if user.valid?
             render json: capture
@@ -22,11 +21,9 @@ class CapturesController < ApplicationController
     end
 
     def destroy
-        # byebug
         pokemonID = set_capture.pokemon_id
         pokemon = Pokemon.find_by(id: set_capture.pokemon_id)
         Pokemon.find_by(id: set_capture.pokemon_id).destroy
-        # byebug
         render json: pokemon
     end
 
