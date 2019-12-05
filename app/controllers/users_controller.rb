@@ -28,6 +28,11 @@ class UsersController < ApplicationController
         end
     end
 
+    def destroy
+        set_user.destroy
+        render json: "Your account has been deleted"
+    end
+
     private
 
     def user_params
