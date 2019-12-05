@@ -10,13 +10,13 @@ pokemonArr = ["Bulbasaur", "Ivysaur", "Venasaur", "Charmander", "Charmeleon", "C
 
 i = 1
 while i <= 151 do 
-    Pokemon.create( name: pokemonArr[i - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{i}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{i}.png", lv: 1, exp: 0, exp_max: 10, hp: rand(5) + 11, atk: rand(7) + 1, def: rand(7) + 1, spd: rand(5) + 1, stat_pts: 0 )
+    Pokemon.create( name: pokemonArr[i - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{i}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{i}.png", lv: 1, exp: 0, exp_max: 10, hp: rand(5) + 11, atk: rand(7) + 3, def: rand(7) + 3, spd: rand(5) + 3, stat_pts: 0 )
     i += 1
 end
 
 j = 1
 while j <= 151 do 
-    Pokemon.create( name: pokemonArr[j - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{j}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{j}.png", lv: 1, exp: 0, exp_max: 10, hp: rand(5) + 11, atk: rand(5) + 1, def: rand(5) + 1, spd: rand(5) + 1, stat_pts: 0 )
+    Pokemon.create( name: pokemonArr[j - 1], front_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{j}.png", back_img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/#{j}.png", lv: 1, exp: 0, exp_max: 10, hp: rand(7) + 11, atk: rand(5) + 1, def: rand(5) + 1, spd: rand(5) + 1, stat_pts: 0 )
     j += 1
 end
 
