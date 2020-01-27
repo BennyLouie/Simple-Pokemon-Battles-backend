@@ -25,3 +25,5 @@ Stored in this repository is the user information, Pokemon data, and a database 
 
 /captures
 /captures/#{number}
+
+Note: I am currently missing in my UserController's `show` method an if statement that checks if the user_id acquired from the token matches the user id in the database.
