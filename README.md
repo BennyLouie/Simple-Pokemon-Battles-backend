@@ -1,8 +1,6 @@
 # This repository works as the backend for the following React Project:
 https://github.com/BennyLouie/simple-pokemon-battles
 
-## You may want to fork and clone from that repository beforehand.
-
 ## To start off...
     -Fork and clone from this repository
     -Bundle install the gems from the Gemfile
